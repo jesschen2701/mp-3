@@ -1,3 +1,4 @@
+
 import styled from "styled-components";
 
 export const colors = {
@@ -36,11 +37,6 @@ export const PageWrapper = styled.div`
   max-width: 1600px;
   margin: 0 auto;
   border: ${colors.border} solid 3px;
-
-  @media screen and (max-width: 750px) {
-    width: 80%;
-    margin: 0 auto;
-  }
 `;
 
 export const ContentRow = styled.div`
@@ -51,7 +47,6 @@ export const ContentRow = styled.div`
 
   @media screen and (max-width: 750px) {
     flex-direction: column;
-    height: auto;
   }
 `;
 
@@ -85,20 +80,24 @@ export const StyledNav = styled.nav`
     display: flex;
     flex-direction: column;
   }
+
   li {
     border: none;
     text-align: center;
     padding: 3vh 1%;
   }
+
   #current {
     color: #FFFFFF;
     background-color: ${colors.active};
   }
+
   a {
     text-decoration: none;
     font-size: calc(14px + 0.45vw);
     color: ${colors.lightBlue};
   }
+
   #current a {
     color: #FFFFFF;
     font-weight: 500;
@@ -106,11 +105,13 @@ export const StyledNav = styled.nav`
 
   @media screen and (max-width: 750px) {
     width: 100%;
+
     ul {
       flex-direction: row;
       justify-content: center;
       flex-wrap: wrap;
     }
+
     li { padding: 2%; }
     a { font-size: calc(9px + 0.8vw); }
   }
@@ -141,24 +142,28 @@ export const Main = styled.main`
     color: ${colors.heading};
     margin: 3% 3% 0.5%;
   }
+
   h5 {
     font: 400 calc(16px + 0.7vw) "Jim Nightshade", cursive;
     color: ${colors.muted};
     margin: 0 3.5% 2%;
   }
 
-  /* Home layout: original MP1 selector values */
+  /* Home */
+
   #mainPart {
     display: flex;
     flex-direction: row;
     margin-top: 0;
   }
+
   img {
     max-width: 100%;
     width: 42%;
     height: auto;
     object-fit: contain;
   }
+
   #wording {
     width: 50%;
     display: flex;
@@ -168,18 +173,17 @@ export const Main = styled.main`
 
   #wording h3,
   #educationWording h3,
-  .experienceCard h3,
-  .projectCard h3,
-  .skillCard h3,
-  #calculator h3 {
+  .skillCard h3 {
     font-size: calc(18px + 0.8vw);
     font-weight: 700;
     color: ${colors.blue};
   }
+
   #wording h3 {
     font-family: "Almendra", serif;
     font-size: calc(22px + 1.5vw);
   }
+
   #wording h4,
   #cardsEducation h4,
   .experienceCard h4,
@@ -189,6 +193,7 @@ export const Main = styled.main`
     font-weight: 700;
     color: ${colors.heading};
   }
+
   #wording p,
   #educationWording p,
   .experienceCard li,
@@ -202,6 +207,8 @@ export const Main = styled.main`
     color: ${colors.text};
   }
 
+  /* Shared card styling */
+
   .card,
   .experienceCard,
   .projectCard,
@@ -212,12 +219,17 @@ export const Main = styled.main`
     border: ${colors.border} solid 2px;
     border-radius: 5px;
   }
+
   .card {
     text-align: center;
     width: 80%;
     margin: calc(12px + 0.3vw) auto;
   }
-  .card h4 { text-align: center; }
+
+  .card h4 {
+    text-align: center;
+  }
+
   #contactMe {
     width: 30%;
     height: auto;
@@ -235,12 +247,14 @@ export const Main = styled.main`
   }
 
   /* Education */
+
   #educationIntro {
     width: 90%;
     margin: 2% auto;
     text-align: center;
     padding: 1%;
   }
+
   #buIMG {
     display: block;
     width: 94%;
@@ -249,23 +263,30 @@ export const Main = styled.main`
     object-fit: contain;
     margin: 1% auto;
   }
+
   #educationWording {
     width: 90%;
     margin: 1% auto;
   }
+
   #cardsEducation {
     display: flex;
     flex-direction: row;
     margin: 1%;
   }
+
   #cardsEducation .card {
     width: 31%;
     margin: 1% auto;
     padding: calc(8px + 0.3vw) 0;
   }
+
   #cardsEducation ul,
   .experienceCard ul,
-  .skillCard ul { padding-left: 8%; }
+  .skillCard ul {
+    padding-left: 8%;
+  }
+
   #cardsEducation li,
   .experienceCard li,
   .skillCard li {
@@ -274,18 +295,21 @@ export const Main = styled.main`
   }
 
   /* Experience */
+
   #experienceList {
     display: flex;
     flex-direction: column;
     width: 94%;
     margin: 2% auto;
   }
+
   .experienceCard {
     width: 100%;
     margin: 0 0 2%;
     padding: 2%;
     text-align: left;
   }
+
   .experienceHeading {
     display: flex;
     flex-direction: row;
@@ -293,6 +317,7 @@ export const Main = styled.main`
     align-items: flex-start;
     margin: 0;
   }
+
   .experienceHeading h3 {
     width: 70%;
     margin: 0;
@@ -300,6 +325,7 @@ export const Main = styled.main`
     font-size: calc(17px + 0.7vw);
     font-weight: 700;
   }
+
   .experienceHeading .experienceDate {
     width: 27%;
     margin: 0;
@@ -308,16 +334,19 @@ export const Main = styled.main`
     font-size: calc(11px + 0.4vw);
     font-weight: 500;
   }
+
   .experienceCard h4 {
     margin: 2% 0;
     color: ${colors.muted};
     font-size: calc(12px + 0.35vw);
     font-weight: 400;
   }
+
   .experienceCard ul {
     margin: 1% 0;
     padding-left: calc(18px + 0.5vw);
   }
+
   .experienceCard li {
     margin: 1% 0;
     color: ${colors.text};
@@ -325,6 +354,7 @@ export const Main = styled.main`
   }
 
   /* Projects */
+
   #projectList {
     display: flex;
     flex-direction: row;
@@ -333,16 +363,16 @@ export const Main = styled.main`
     width: 94%;
     margin: 2% auto;
   }
+
   .projectCard {
     width: 32%;
     margin: 0;
     padding: 1.5%;
     text-align: left;
   }
+
   .projectPreview img {
     display: block;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     max-width: 100%;
     height: 100%;
@@ -351,18 +381,21 @@ export const Main = styled.main`
     object-fit: contain;
     border-radius: 5px;
   }
+
   .projectCard h3 {
     margin: 3% 0;
     color: ${colors.heading};
     font-size: calc(16px + 0.5vw);
     font-weight: 700;
   }
+
   .projectCard h4 {
     margin: 3% 0;
     color: ${colors.muted};
     font-size: calc(11px + 0.3vw);
     font-weight: 500;
   }
+
   .projectCard p {
     margin: 4% 0;
     color: ${colors.text};
@@ -370,6 +403,7 @@ export const Main = styled.main`
   }
 
   /* Calculator */
+
   #calculator {
     width: 94%;
     margin: 2% auto;
@@ -377,13 +411,18 @@ export const Main = styled.main`
     text-align: left;
     background-color: #F3F6FB;
   }
+
   #calculator h3 {
     margin: 0 0 1%;
     color: ${colors.heading};
     font-size: calc(19px + 0.8vw);
     font-weight: 700;
   }
-  #calculator p { margin: 1% 0 2%; }
+
+  #calculator p {
+    margin: 1% 0 2%;
+  }
+
   #calculatorRow {
     display: flex;
     flex-direction: row;
@@ -391,9 +430,22 @@ export const Main = styled.main`
     align-items: flex-start;
     margin: 2% 0 0;
   }
-  #calculatorRow .numberField { width: 20%; margin: 0; }
-  #operationField { width: 40%; margin: 0; }
-  #resultField { width: 14%; margin: 0; }
+
+  #calculatorRow .numberField {
+    width: 20%;
+    margin: 0;
+  }
+
+  #operationField {
+    width: 40%;
+    margin: 0;
+  }
+
+  #resultField {
+    width: 14%;
+    margin: 0;
+  }
+
   #calculatorRow label,
   #calculatorRow h4 {
     display: block;
@@ -402,6 +454,7 @@ export const Main = styled.main`
     font-size: calc(11px + 0.3vw);
     font-weight: 700;
   }
+
   #calculatorRow input {
     width: 100%;
     height: calc(34px + 0.5vw);
@@ -411,6 +464,7 @@ export const Main = styled.main`
     border-radius: 5px;
     background-color: #FFFFFF;
   }
+
   #calculatorButtons {
     display: flex;
     flex-direction: row;
@@ -418,6 +472,7 @@ export const Main = styled.main`
     justify-content: space-between;
     margin: 0;
   }
+
   #calculatorButtons button {
     width: 15%;
     height: calc(34px + 0.5vw);
@@ -429,6 +484,7 @@ export const Main = styled.main`
     border: 2px solid ${colors.button};
     border-radius: 5px;
   }
+
   #resultField #result {
     width: 100%;
     min-height: calc(34px + 0.5vw);
@@ -438,10 +494,13 @@ export const Main = styled.main`
     border: 2px solid #C8D5E4;
     border-radius: 5px;
   }
-  /* The only added visual state required by MP1; styled, never inline. */
-  #resultField #result.negative { color: red; }
+
+  #resultField #result.negative {
+    color: red;
+  }
 
   /* Skills */
+
   #skillsList {
     display: flex;
     flex-direction: row;
@@ -449,12 +508,14 @@ export const Main = styled.main`
     flex-wrap: wrap;
     margin: 1%;
   }
+
   .skillCard {
     width: 44%;
     padding: 1%;
   }
 
   /* Contact */
+
   #contactIntro {
     width: 94%;
     margin: 2% auto;
@@ -462,6 +523,7 @@ export const Main = styled.main`
     color: ${colors.text};
     font-size: calc(13px + 0.35vw);
   }
+
   #contactColumns {
     display: flex;
     flex-direction: row;
@@ -470,6 +532,7 @@ export const Main = styled.main`
     width: 94%;
     margin: 2% auto;
   }
+
   .contactPanel {
     width: 49%;
     margin: 0;
@@ -479,6 +542,7 @@ export const Main = styled.main`
     border: 2px solid ${colors.border};
     border-radius: 5px;
   }
+
   .contactPanel h3,
   #contactAvailability h3 {
     margin: 0 0 calc(12px + 0.4vw);
@@ -486,28 +550,36 @@ export const Main = styled.main`
     font-size: calc(18px + 0.6vw);
     font-weight: 700;
   }
+
   .contactEntry {
     margin: 0;
     padding: calc(10px + 0.5vw) 0;
     border-bottom: 1px solid ${colors.border};
   }
+
   .contactEntry h4 {
     margin: 0 0 calc(4px + 0.1vw);
     color: ${colors.heading};
     font-size: calc(13px + 0.35vw);
     font-weight: 700;
   }
+
   .contactEntry p {
     margin: 0;
     color: ${colors.text};
     font-size: calc(13px + 0.3vw);
   }
+
   .contactEntry a {
     margin: 0;
     color: ${colors.blue};
     text-decoration: none;
   }
-  #contactForm { margin: 0; }
+
+  #contactForm {
+    margin: 0;
+  }
+
   #contactForm label {
     display: block;
     margin: calc(10px + 0.3vw) 0 calc(5px + 0.1vw);
@@ -515,6 +587,7 @@ export const Main = styled.main`
     font-size: calc(13px + 0.3vw);
     font-weight: 700;
   }
+
   #contactForm input,
   #contactForm textarea {
     display: block;
@@ -527,7 +600,11 @@ export const Main = styled.main`
     border-radius: 5px;
     font-size: calc(13px + 0.3vw);
   }
-  #contactForm textarea { height: calc(80px + 2vw); }
+
+  #contactForm textarea {
+    height: calc(80px + 2vw);
+  }
+
   #contactForm button {
     margin: calc(12px + 0.3vw) 0 0;
     padding: calc(7px + 0.2vw) calc(22px + 1vw);
@@ -538,11 +615,13 @@ export const Main = styled.main`
     font-size: calc(13px + 0.3vw);
     font-weight: 400;
   }
+
   #contactNotice {
     margin: calc(10px + 0.2vw) 0 0;
     color: ${colors.muted};
     font-size: calc(11px + 0.2vw);
   }
+
   #contactAvailability {
     width: 94%;
     margin: 2% auto;
@@ -552,63 +631,128 @@ export const Main = styled.main`
     border: 2px solid ${colors.border};
     border-radius: 5px;
   }
+
   #contactAvailability p {
     margin: 1% 0;
     color: ${colors.text};
     font-size: calc(13px + 0.3vw);
   }
 
-  /* Original 1000px breakpoint */
+  /* Screens <= 1000px */
+
   @media screen and (max-width: 1000px) {
     #mainPart,
     #cardsEducation,
-    #projectList { flex-direction: column; }
+    #projectList {
+      flex-direction: column;
+    }
+
     img {
       width: 55%;
       margin: 2% auto;
     }
-    #wording { width: 92%; margin: 1% auto; }
+
+    #wording {
+      width: 92%;
+      margin: 1% auto;
+    }
+
     #cardsEducation .card,
-    .skillCard,
-    .numberField {
+    .skillCard {
       width: 90%;
       margin: 2% auto;
     }
+
     .projectCard {
       width: 100%;
       margin: 0 0 3%;
       padding: 3%;
     }
-    .projectPreview { height: calc(120px + 8vw); }
-    #calculatorRow { flex-wrap: wrap; }
-    #calculatorRow .numberField { width: 48%; margin: 0 0 4%; }
-    #operationField { width: 72%; }
-    #resultField { width: 24%; }
-    #contactColumns { flex-direction: column; }
-    .contactPanel { width: 100%; margin: 0 0 3%; padding: 4%; }
-    #contactAvailability { padding: 4%; }
+
+    .projectPreview {
+      height: calc(120px + 8vw);
+    }
+
+    #calculatorRow {
+      flex-wrap: wrap;
+    }
+
+    #calculatorRow .numberField {
+      width: 48%;
+      margin: 0 0 4%;
+    }
+
+    #operationField {
+      width: 72%;
+    }
+
+    #resultField {
+      width: 24%;
+    }
+
+    #contactColumns {
+      flex-direction: column;
+    }
+
+    .contactPanel {
+      width: 100%;
+      margin: 0 0 3%;
+      padding: 4%;
+    }
+
+    #contactAvailability {
+      padding: 4%;
+    }
   }
 
-  /* Original 750px breakpoint */
+  /* Screens <= 750px */
+
   @media screen and (max-width: 750px) {
     width: 100%;
     height: auto;
     text-align: center;
-    & * { margin: 2%; }
-    h2 { font-size: calc(20px + 2vw); }
-    h5 { font-size: calc(14px + 0.7vw); margin: 0 auto 2%; }
-    #mainPart { margin: 0; }
+
+    h2 {
+      font-size: calc(20px + 2vw);
+    }
+
+    h5 {
+      font-size: calc(14px + 0.7vw);
+      margin: 0 auto 2%;
+    }
+
+    #mainPart {
+      margin: 0;
+    }
+
     img {
       display: block;
       width: 70%;
       height: auto;
       margin: 2% auto;
     }
-    #wording { width: 95%; margin: 0 auto; }
-    #wording p { margin: 1% auto; }
-    .card { margin: 2% auto; }
-    #contactMe { width: 35%; margin: calc(14px + 0.4vw) auto; }
-    #calculatorButtons button { width: 26%; padding: 2%; }
-    #result { width: 70%; }
+
+    #wording {
+      width: 95%;
+      margin: 0 auto;
+    }
+
+    #wording p {
+      margin: 1% auto;
+    }
+
+    .card {
+      margin: 2% auto;
+    }
+
+    #contactMe {
+      width: 35%;
+      margin: calc(14px + 0.4vw) auto;
+    }
+
+    #calculatorButtons button {
+      width: 26%;
+      padding: 2%;
+    }
   }
 `;
